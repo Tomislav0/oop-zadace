@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QH/v951oofVw2vWr2iyRrP6mzwp5FDuk7s12Rh0j4o0ULlExAawrJJBPmqlPPmHawff/kLQfjnGsFHNAoOzpAA==",
+  "dgSpecHash": "FcI24UMEiJeA3jpOmk+SuX+uXNE7c/TAQEGhscRNPmvK9woAQeYT19uV6N+RT6zM1d9H7Sej8Ctie3zZcGMZ6A==",
   "success": true,
-  "projectFilePath": "D:\\FAKS\\2. godina\\OOP\\DZ1\\Solution\\class_library\\class_library.csproj",
+  "projectFilePath": "C:\\Users\\tomis\\Desktop\\oop-zadace\\DZ2\\Solution\\class_library\\class_library.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tomis\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\tomis\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
