@@ -8,37 +8,45 @@ namespace class_library
     {
         Episode[] episodes;
         public int Num { get; private set; }
-        int viewers=0;
-        TimeSpan totalDuration=TimeSpan.Parse("0");
         public int Length { get; private set; }
         public Season(int num,Episode[] episodes)
         {
             this.episodes = episodes;
             Num = num;
+
+            Length = episodes.Length;
+        }
+        private int GetViewers()
+        {
+            int viewers = 0;
             foreach(Episode episode in episodes)
             {
                 viewers += episode.GetViewerCount();
+            }
+            return viewers;
+        }
+        private TimeSpan GetDuration()
+        {
+            TimeSpan totalDuration = TimeSpan.Parse("0"); 
+            foreach (Episode episode in episodes)
+            {
                 totalDuration += episode.GetLenght();
             }
-            Length = episodes.Length;
+            return totalDuration;
         }
         public Episode this[int index]
         {
             get {
-                viewers++;
                 return episodes[index];
             }
 
         }
-        public void AddView(int viewers)
-        {
-            this.viewers += viewers;
-        }
+        
         public override string ToString()
         {
             string border = "=================================================";
             return $"Season {Num}:\n{border}\n{string.Join<Episode>(Environment.NewLine, episodes)}\nReport:\n{border}" +
-                $"\nTotal viewers: {viewers}\nTotal duration: {totalDuration}\n{border}\n";
+                $"\nTotal viewers: {GetViewers()}\nTotal duration: {GetDuration()}\n{border}\n";
         }
 
     }
